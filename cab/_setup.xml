@@ -1,0 +1,108 @@
+<wap-provisioningdoc>
+  <characteristic type="Install">
+    <parm name="InstallPhase" value="install" />
+    <parm name="AppName" value="KaiserGPU 1.0" />
+    <parm name="InstallDir" value="%CE1%\KaiserGPU" translation="install" />
+    <parm name="NumDirs" value="3" />
+    <parm name="NumFiles" value="13" />
+    <parm name="NumRegKeys" value="2" />
+    <parm name="NumRegVals" value="4" />
+    <parm name="NumShortcuts" value="2" />
+  </characteristic>
+  <characteristic type="FileOperation">
+    <characteristic type="%CE2%" translation="install">
+      <characteristic type="MakeDir" />
+      <characteristic type="libgles_cm.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0000.001" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="libgles_cm_ks.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0001.002" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="ahi2dati.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0002.003" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="ahi2dati_dm.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0003.004" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="clkregim.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0004.005" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="msm_clk.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0005.006" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="TrsTai_extensioF.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0006.007" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="wce_reF.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0007.008" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="wce_pmeF.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0008.009" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="wce_rex_dm.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0009.010" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="d3dm_ati.dll" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0010.011" />
+        </characteristic>
+      </characteristic>
+    </characteristic>
+    <characteristic type="%CE1%\KaiserGPU" translation="install">
+      <characteristic type="MakeDir" />
+      <characteristic type="gltest.exe" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0011.012" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="cuberun.exe" translation="install">
+        <characteristic type="Extract">
+          <parm name="Source" value="KGPU0012.013" />
+        </characteristic>
+      </characteristic>
+    </characteristic>
+    <characteristic type="%CE11%" translation="install">
+      <characteristic type="MakeDir" />
+      <characteristic type="gltest.lnk" translation="install">
+        <characteristic type="Shortcut">
+          <parm name="Source" value="%CE1%\KaiserGPU\gltest.exe" translation="install" />
+        </characteristic>
+      </characteristic>
+      <characteristic type="cuberun.lnk" translation="install">
+        <characteristic type="Shortcut">
+          <parm name="Source" value="%CE1%\KaiserGPU\cuberun.exe" translation="install" />
+        </characteristic>
+      </characteristic>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Registry">
+    <characteristic type="HKLM\System\D3DM\Drivers" translation="install">
+      <parm name="LocalHook" value="d3dm_ati.dll" datatype="string" />
+    </characteristic>
+    <characteristic type="HKLM\Software\KaiserGPU" translation="install">
+      <parm name="LandscapeRotation" value="90" datatype="integer" />
+      <parm name="HelperVisible" value="0" datatype="integer" />
+      <parm name="DisableRotation" value="0" datatype="integer" />
+    </characteristic>
+  </characteristic>
+</wap-provisioningdoc>
