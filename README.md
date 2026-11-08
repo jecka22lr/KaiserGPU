@@ -46,3 +46,7 @@ docs/       how it works and what was learned
 - No 2D GUI acceleration, and screen tearing remains (it's in HTC's 2D display driver, not the 3D stack).
 - In landscape, `glReadPixels` and `glDrawTexOES` aren't remapped yet; HUDs drawn with draw_texture would appear sideways.
 - The 2008 driver is OpenGL ES **1.0** only: no framebuffer objects, no state queries (`glGet*` beyond constants).
+
+## License
+
+Our code and docs are MIT, see [LICENSE](LICENSE). The files in `vendor/` (and the copies inside the CAB) belong to HTC, ATI/AMD and Qualcomm and aren't covered by it.
